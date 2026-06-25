@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-25T18:40:10Z",
+  "title": "Design System: La French Tech Oslo",
+  "extensions": {
+    "colorMeta": {
+      "campaign-magenta": {
+        "role": "primary",
+        "displayName": "Campaign Magenta",
+        "canonical": "oklch(41.9% 0.168 7.5)",
+        "tonalRamp": [
+          "oklch(15% 0.168 7.5)",
+          "oklch(25% 0.168 7.5)",
+          "oklch(35% 0.168 7.5)",
+          "oklch(45% 0.168 7.5)",
+          "oklch(55% 0.150 7.5)",
+          "oklch(65% 0.120 7.5)",
+          "oklch(80% 0.080 7.5)",
+          "oklch(95% 0.030 7.5)"
+        ]
+      },
+      "campaign-violet": {
+        "role": "primary",
+        "displayName": "Campaign Violet",
+        "canonical": "oklch(28.1% 0.169 280.4)",
+        "tonalRamp": [
+          "oklch(12% 0.169 280.4)",
+          "oklch(20% 0.169 280.4)",
+          "oklch(28% 0.169 280.4)",
+          "oklch(38% 0.150 280.4)",
+          "oklch(50% 0.120 280.4)",
+          "oklch(65% 0.090 280.4)",
+          "oklch(80% 0.060 280.4)",
+          "oklch(95% 0.025 280.4)"
+        ]
+      },
+      "campaign-blue": {
+        "role": "primary",
+        "displayName": "Campaign Blue",
+        "canonical": "oklch(59.7% 0.215 258.0)",
+        "tonalRamp": [
+          "oklch(15% 0.215 258.0)",
+          "oklch(25% 0.215 258.0)",
+          "oklch(35% 0.215 258.0)",
+          "oklch(45% 0.215 258.0)",
+          "oklch(60% 0.215 258.0)",
+          "oklch(72% 0.160 258.0)",
+          "oklch(84% 0.090 258.0)",
+          "oklch(95% 0.035 258.0)"
+        ]
+      },
+      "french-tech-red": {
+        "role": "secondary",
+        "displayName": "La French Tech Red",
+        "canonical": "oklch(61.5% 0.252 29.2)",
+        "tonalRamp": [
+          "oklch(15% 0.252 29.2)",
+          "oklch(25% 0.252 29.2)",
+          "oklch(35% 0.252 29.2)",
+          "oklch(45% 0.252 29.2)",
+          "oklch(55% 0.252 29.2)",
+          "oklch(65% 0.220 29.2)",
+          "oklch(80% 0.120 29.2)",
+          "oklch(95% 0.040 29.2)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(24.4% 0.000 89.9)",
+        "tonalRamp": [
+          "oklch(10% 0.000 89.9)",
+          "oklch(20% 0.000 89.9)",
+          "oklch(30% 0.000 89.9)",
+          "oklch(40% 0.000 89.9)",
+          "oklch(55% 0.000 89.9)",
+          "oklch(70% 0.000 89.9)",
+          "oklch(85% 0.000 89.9)",
+          "oklch(96% 0.000 89.9)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Campaign Display",
+        "purpose": "Bold local-to-global hero statements."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Readable community and membership copy."
+      },
+      "condensed": {
+        "displayName": "Condensed Support",
+        "purpose": "Short campaign support lines and compact event-style copy."
+      }
+    },
+    "shadows": [
+      {
+        "name": "badge-lift",
+        "value": "0 8px 24px rgba(0, 0, 0, 0.18)",
+        "purpose": "Lift circular logo badges above saturated campaign gradients."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-standard",
+        "value": "180ms cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Default state changes for links and buttons once styling is introduced."
+      },
+      {
+        "name": "campaign-reveal",
+        "value": "420ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Optional first-load reveal for campaign bands and badge lockups."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "640px"
+      },
+      {
+        "name": "desktop",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Campaign Band",
+      "kind": "custom",
+      "refersTo": "campaign-band",
+      "description": "Horizontal local-to-global campaign surface extracted from the banner reference.",
+      "html": "<section class=\"ds-campaign-band\"><div><strong>From local<br><span>to global:</span></strong><p>Let's join forces to drive French Tech forward</p></div><div class=\"ds-badge\">La French Tech<br><b>Oslo</b></div></section>",
+      "css": ".ds-campaign-band { display: flex; align-items: center; justify-content: space-between; gap: 32px; min-height: 176px; padding: 32px 64px; color: oklch(100% 0 89.9); background: linear-gradient(100deg, oklch(41.9% 0.168 7.5) 0%, oklch(28.1% 0.169 280.4) 48%, oklch(59.7% 0.215 258.0) 100%); overflow: hidden; } .ds-campaign-band strong { display: block; font: 800 2.25rem/0.95 Montserrat, Arial, sans-serif; letter-spacing: -0.025em; } .ds-campaign-band strong span { font-weight: 500; } .ds-campaign-band p { max-width: 20ch; margin: 12px 0 0; font: 500 1rem/1.1 Oswald, Arial Narrow, sans-serif; } .ds-badge { display: grid; place-items: center; width: 104px; height: 104px; border-radius: 999px; background: oklch(100% 0 89.9); color: oklch(24.4% 0 89.9); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18); text-align: center; font: 500 0.65rem/1.05 Montserrat, Arial, sans-serif; text-transform: uppercase; }"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary action for becoming a member or following the chapter.",
+      "html": "<button class=\"ds-btn-primary\">Become a member (free)</button>",
+      "css": ".ds-btn-primary { background: oklch(61.5% 0.252 29.2); color: oklch(100% 0 89.9); border: 0; border-radius: 4px; padding: 12px 18px; font: 700 1rem/1.2 Montserrat, Arial, sans-serif; transition: background 180ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-primary:hover { background: oklch(52.3% 0.215 29.2); } .ds-btn-primary:focus-visible { outline: 3px solid oklch(62.2% 0.202 255.1); outline-offset: 3px; }"
+    },
+    {
+      "name": "Campaign Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "White CTA variant for saturated campaign-gradient surfaces.",
+      "html": "<button class=\"ds-btn-campaign\">Follow us on LinkedIn</button>",
+      "css": ".ds-btn-campaign { background: oklch(100% 0 89.9); color: oklch(28.1% 0.169 280.4); border: 0; border-radius: 4px; padding: 12px 18px; font: 800 1rem/1.2 Montserrat, Arial, sans-serif; transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-campaign:hover { transform: translateY(-1px); } .ds-btn-campaign:focus-visible { outline: 3px solid oklch(62.2% 0.202 255.1); outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Local-to-Global Signal",
+    "overview": "The banner reference is the primary brand extraction source. The system is not only the rooster logo: it is a high-energy campaign field that moves from saturated magenta-red through deep violet into electric blue, with white knockout typography, a faint world-map texture, and a compact circular chapter badge. It feels official because it uses the La French Tech identity confidently; it feels startup because the gradient, compressed layout, and strong type create forward motion.",
+    "keyCharacteristics": [
+      "Local-to-global narrative: Oslo is one node in a global French Tech network.",
+      "Saturated campaign gradient: magenta/red to violet to electric blue.",
+      "White knockout typography on campaign surfaces.",
+      "Bold geometric display type paired with compact condensed support copy.",
+      "Official circular badge treatment for the chapter mark.",
+      "Subtle map/network texture is allowed when it supports global reach."
+    ],
+    "rules": [
+      {
+        "name": "The Campaign Gradient Rule",
+        "body": "When the page needs a brand moment, use a deliberate magenta -> violet -> blue composition. Do not substitute generic purple-blue gradients.",
+        "section": "colors"
+      },
+      {
+        "name": "The Knockout Rule",
+        "body": "White text belongs on saturated campaign surfaces. Dark text on these colors looks muddy and is prohibited.",
+        "section": "colors"
+      },
+      {
+        "name": "The Campaign Type Rule",
+        "body": "Display text should be bold, compact, and confident. Avoid delicate editorial type, serif headlines, or thin luxury typography.",
+        "section": "typography"
+      },
+      {
+        "name": "The Texture-Over-Shadow Rule",
+        "body": "On campaign surfaces, use map texture, light streaks, or gradient depth before using card shadows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do extract from the full banner: gradient, typography, badge, map texture, and local-to-global message.",
+      "Do preserve La French Tech's logo, red, and official network signal.",
+      "Do make the Oslo chapter clear immediately.",
+      "Do use white knockout text on saturated campaign surfaces.",
+      "Do use the campaign gradient only for high-value brand moments.",
+      "Do keep the two primary actions obvious: follow on LinkedIn and become a free member.",
+      "Do meet WCAG AA contrast and support keyboard-visible focus states."
+    ],
+    "donts": [
+      "Don't reduce the brand to the rooster logo alone.",
+      "Don't make it too playful, informal, or mascot-like.",
+      "Don't dilute the existing La French Tech identity.",
+      "Don't use generic startup landing-page tropes, interchangeable SaaS card grids, gratuitous gradients, or hero metrics.",
+      "Don't use a generic purple-blue gradient that ignores the magenta -> violet -> electric blue campaign structure.",
+      "Don't use visuals that feel unrelated to Oslo or the French Tech network.",
+      "Don't repeat tiny uppercase tracked eyebrows above every section.",
+      "Don't use border-left or border-right accents greater than 1px as side-stripe decoration."
+    ]
+  }
+}

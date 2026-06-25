@@ -1,0 +1,17 @@
+{
+  "name": "frenchtech-no",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/vercel": "^11.0.0",
+    "astro": "^7.0.3"
+  }
+}
+
