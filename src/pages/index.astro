@@ -21,31 +21,39 @@ const pastEvents = [
 const boardMembers = [
   {
     name: 'Christian Gaussen',
+    linkedInUrl: 'https://www.linkedin.com/in/christiangaussen',
     roles: 'President',
   },
   {
     name: 'Michel Sagen',
+    linkedInUrl: 'https://www.linkedin.com/in/michelsagen',
     roles: 'General Secretary & Treasurer · DeepTech Lead',
   },
   {
     name: 'Annabel Dangreville',
+    linkedInUrl: 'https://www.linkedin.com/in/annabel-dangreville',
     roles:
       'General Secretary & Treasurer · Communications, Community & Inclusion · Impact, Energy & Mobility Lead',
   },
   {
     name: 'Alix Lardeau',
+    linkedInUrl:
+      'https://www.linkedin.com/in/alix-lardeau-prevost-digital-marketing-manager',
     roles: 'Communications, Community & Inclusion · Impact, Energy & Mobility Lead',
   },
   {
     name: 'Lene Fredly Rousseau',
+    linkedInUrl: 'https://www.linkedin.com/in/lene-fredly-rousseau-a1371a2b',
     roles: 'Members, Events & Partnerships · DeepTech Lead',
   },
   {
     name: 'Thomas Bassetto',
+    linkedInUrl: 'https://www.linkedin.com/in/thomasbassetto',
     roles: 'Members, Events & Partnerships · DeepTech Lead',
   },
   {
     name: 'Maxime Bousseaud',
+    linkedInUrl: 'https://www.linkedin.com/in/maxime-bousseaud',
     roles: 'Members, Events & Partnerships · Impact, Energy & Mobility Lead',
   },
 ];
@@ -66,6 +74,16 @@ const boardMembers = [
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Oswald:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script
+      is:inline
+      async
+      src="https://plausible.io/js/pa-CKUuujQV95W5Kdvr1C7WU.js"
+    ></script>
+    <script is:inline>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
     <title>La French Tech Oslo</title>
   </head>
   <body>
@@ -178,7 +196,21 @@ const boardMembers = [
             {
               boardMembers.map((member) => (
                 <li>
-                  <strong>{member.name}</strong>
+                  <a href={member.linkedInUrl} rel="noreferrer">
+                    <strong>{member.name}</strong>
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      width="18"
+                      height="18"
+                    >
+                      <rect width="24" height="24" rx="2" fill="#0A66C2"></rect>
+                      <path
+                        fill="#FFFFFF"
+                        d="M19.35 19.35h-3.1v-4.86c0-1.16-.03-2.65-1.62-2.65-1.61 0-1.86 1.26-1.86 2.57v4.94H9.66v-10h2.99v1.37h.04c.42-.79 1.43-1.62 2.94-1.62 3.14 0 3.72 2.07 3.72 4.76v5.49ZM6.16 7.98a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6Zm1.55 11.37H4.6v-10h3.11v10Z"
+                      ></path>
+                    </svg>
+                  </a>
                   <span>{member.roles}</span>
                 </li>
               ))
@@ -302,7 +334,7 @@ const boardMembers = [
   h1 {
     max-width: 12.5ch;
     margin: 0;
-    font-size: clamp(2.65rem, 6.3vw, 4.9rem);
+    font-size: clamp(2.65rem, 6.3vw, 4.25rem);
     font-weight: 900;
     line-height: 0.95;
     letter-spacing: -0.03em;
@@ -550,6 +582,23 @@ const boardMembers = [
   .board-list strong {
     font-size: 1.02rem;
     line-height: 1.25;
+  }
+
+  .board-list a {
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .board-list a svg {
+    display: block;
+    flex: 0 0 auto;
+    align-self: center;
+  }
+
+  .board-list a:hover {
+    color: var(--french-tech-red-deep);
   }
 
   .board-list span {
